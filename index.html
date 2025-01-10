@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lottary for Benkho</title>
+    <title>Click to get a new Benkho!</title>
     <script>
-        function generateRandomNumber() {
-            const randomNumber = Math.floor(Math.random() * 100) + 1;
-            document.getElementById('randomNumber').innerText = randomNumber;
+        function generateRandomImage() {
+            const images = [
+                'benkho_imgs/1.png',
+                'benkho_imgs/2.png',
+                'benkho_imgs/3.png',
+                'benkho_imgs/4.png',
+                // Add more image paths as needed
+            ];
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const randomImage = images[randomIndex];
+            document.getElementById('randomImage').src = randomImage;
         }
     </script>
 </head>
 <body>
-    <h1>Random Number Generator</h1>
-    <button onclick="generateRandomNumber()">Generate Random Number</button>
-    <p id="randomNumber"></p>
+    <h1>Click to get a new Benkho!</h1>
+    <button onclick="generateRandomImage()">Click Me</button>
+    <br>
+    <img id="randomImage" src="benkho_imgs/1.png" alt="Random Image" style="margin-top: 20px; width: 300px;">
 </body>
 </html>
