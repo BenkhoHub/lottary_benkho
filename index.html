@@ -5,24 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click to get a new Benkho!</title>
     <script>
+        const images = [
+            { src: 'benkho_imgs/1.png', description: "初始彬" },
+            { src: 'benkho_imgs/2.png', description: "山楂彬" },
+            { src: 'benkho_imgs/3.png', description: "牙疼彬" },
+            { src: 'benkho_imgs/4.png', description: "彬之遥" },
+            { src: 'benkho_imgs/5.png', description: "剧场彬" },
+            { src: 'benkho_imgs/6.png', description: "抬头彬" },
+            { src: 'benkho_imgs/7.png', description: "该剪刘海了彬" },
+            { src: 'benkho_imgs/9.png', description: "卷毛彬" },
+            { src: 'benkho_imgs/10.png', description: "花花彬" }
+            // Add more image paths and descriptions as needed
+        ];
         function generateRandomImage() {
-            const images = [
-                'benkho_imgs/1.png',
-                'benkho_imgs/2.png',
-                'benkho_imgs/3.png',
-                'benkho_imgs/4.png',
-                // Add more image paths as needed
-            ];
             const randomIndex = Math.floor(Math.random() * images.length);
             const randomImage = images[randomIndex];
-            document.getElementById('randomImage').src = randomImage;
+            document.getElementById('randomImage').src = randomImage.src;
+            document.getElementById('imageDescription').innerText = '恭喜你抽到了：' + randomImage.description;
         }
     </script>
+
 </head>
 <body>
     <h1>Click to get a new Benkho!</h1>
     <button onclick="generateRandomImage()">Click Me</button>
     <br>
-    <img id="randomImage" src="benkho_imgs/1.png" alt="Random Image" style="margin-top: 20px; width: 300px;">
+    <p id="imageDescription"> </p>
+    <img id="randomImage" src="benkho_imgs/1.png" alt="Random Image" style="margin-top: 20px; width: 100px;">
 </body>
 </html>
