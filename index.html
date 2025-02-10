@@ -58,14 +58,14 @@
             setTimeout(() => {
                 clearInterval(interval);
                 document.getElementById('randomImage').style.transform = 'rotate(0deg)';
-            }, 2160);
+            }, 3240);
 
             setTimeout(() => {
-                document.getElementById('randomImage').style.marginTop = '20px';
-                document.getElementById('randomImage').style.width = '300px';
                 document.getElementById('randomImage').src = randomImage.src;
                 document.getElementById('imageDescription').innerText = '恭喜你抽到了：' + randomImage.description;
-            }, 2000);
+                document.getElementById('randomImage').style.marginTop = '20px';
+                document.getElementById('randomImage').style.width = '300px';
+            }, 3120);
 
         }
     </script>
