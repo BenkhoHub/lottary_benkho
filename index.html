@@ -65,7 +65,7 @@
                     document.getElementById('randomImage').style.transform = 'rotate(0deg)';
                     document.getElementById('randomImage').src = img.src;
                     document.getElementById('imageDescription').innerText = '恭喜你抽到了：' + randomImage.description;
-                    document.getElementById('randomImage').style.marginTop = '20px';
+                    document.getElementById('randomImage').style.marginTop = '60px';
                     document.getElementById('randomImage').style.width = '300px';
                     document.getElementById('randomImage').onclick = generateRandomImage; // Re-enable onclick event
                 };
@@ -83,7 +83,6 @@
     </div>
     
     <div style="display: flex; flex-direction: column; align-items: center;">
-        <!-- <img id="randomImage" src="benkho_imgs/1.png" alt="Random Image" style="margin-top: 20px; width: 300px;" onclick="generateRandomImage()"> -->
         <img src="potato.png" style="display: none;">
         <img id="randomImage" src="benkho_imgs/1.png" style="margin-top: 60px; width: 300px; display: block; margin-left: auto; margin-right: auto;" onclick="generateRandomImage()">
     </div>
